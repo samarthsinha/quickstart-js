@@ -98,9 +98,14 @@ limitations under the License.
     appId: "1:1030960605375:web:d78549c26c185f3ab4fe0a",
     measurementId: "G-58TESX7FPJ"
   });
+   const messaging = firebase.messaging();
+  navigator.serviceWorker.register('./firebase-messaging-sw.js')
+  .then((registration) => {
+   messaging.useServiceWorker(registration);
+});
   
   
-  const messaging = firebase.messaging();
+ 
   // [END get_messaging_object]
   // [START set_public_vapid_key]
   // Add the public key generated from the console here.
