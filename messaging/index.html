@@ -88,9 +88,15 @@ limitations under the License.
 <script>
   // [START get_messaging_object]
   // Retrieve Firebase Messaging object.
-  navigator.serviceWorker.register('firebase-messaging-sw.js', {
-    scope: '/'
-  });
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('firebase-messaging-sw.js')
+    .then(function(registration) {
+      console.log('Registration successful, scope is:', registration.scope);
+    })
+    .catch(function(error) {
+      console.log('Service worker registration failed, error:', error);
+    });
+}
   firebase.initializeApp({
     apiKey: "AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo",
     authDomain: "mqtttestapplication.firebaseapp.com",
