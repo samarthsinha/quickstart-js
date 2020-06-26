@@ -91,14 +91,7 @@ limitations under the License.
  
   
   firebase.initializeApp({
-    apiKey: "AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo",
-    authDomain: "mqtttestapplication.firebaseapp.com",
-    databaseURL: "https://mqtttestapplication.firebaseio.com",
-    projectId: "mqtttestapplication",
-    storageBucket: "mqtttestapplication.appspot.com",
-    messagingSenderId: "1030960605375",
-    appId: "1:1030960605375:web:d78549c26c185f3ab4fe0a",
-    measurementId: "G-58TESX7FPJ"
+    messagingSenderId: "1030960605375"
   });
    const messaging = firebase.messaging();
     navigator.serviceWorker.register('firebase-messaging-sw.js',{
@@ -131,14 +124,7 @@ limitations under the License.
         console.log('Unable to get permission to notify.', err);
       });
   });
- 
-  
- 
-  // [END get_messaging_object]
-  // [START set_public_vapid_key]
-  // Add the public key generated from the console here.
-  messaging.usePublicVapidKey('AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo');
-  // [END set_public_vapid_key]
+
 
   // IDs of divs that display Instance ID token UI or request permission UI.
   const tokenDivId = 'token_div';
