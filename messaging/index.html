@@ -89,7 +89,9 @@ limitations under the License.
   // [START get_messaging_object]
   // Retrieve Firebase Messaging object.
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('firebase-messaging-sw.js')
+    navigator.serviceWorker.register('firebase-messaging-sw.js',{
+  scope: '/quickstart-js/messaging/'
+})
     .then(function(registration) {
       console.log('Registration successful, scope is:', registration.scope);
     })
