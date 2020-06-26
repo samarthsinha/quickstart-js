@@ -89,17 +89,7 @@ limitations under the License.
   // [START get_messaging_object]
   // Retrieve Firebase Messaging object.
   
-//   firebase.initializeApp({
-//     apiKey: "AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo",
-//     authDomain: "mqtttestapplication.firebaseapp.com",
-//     databaseURL: "https://mqtttestapplication.firebaseio.com",
-//     projectId: "mqtttestapplication",
-//     storageBucket: "mqtttestapplication.appspot.com",
-//     messagingSenderId: "1030960605375",
-//     appId: "1:1030960605375:web:d78549c26c185f3ab4fe0a",
-//     measurementId: "G-58TESX7FPJ"
-//   });
-//    const messaging = firebase.messaging();
+
   
   navigator.serviceWorker.register('./firebase-messaging-sw.js',{
   scope: '/quickstart-js/messaging/'
@@ -107,7 +97,17 @@ limitations under the License.
   .then((registration) => {
    messaging.useServiceWorker(registration);
 });
-  
+    firebase.initializeApp({
+    apiKey: "AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo",
+    authDomain: "mqtttestapplication.firebaseapp.com",
+    databaseURL: "https://mqtttestapplication.firebaseio.com",
+    projectId: "mqtttestapplication",
+    storageBucket: "mqtttestapplication.appspot.com",
+    messagingSenderId: "1030960605375",
+    appId: "1:1030960605375:web:d78549c26c185f3ab4fe0a",
+    measurementId: "G-58TESX7FPJ"
+  });
+   const messaging = firebase.messaging();
   
  
   // [END get_messaging_object]
