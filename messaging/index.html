@@ -90,14 +90,11 @@ limitations under the License.
   // Retrieve Firebase Messaging object.
   
 
-  
-  navigator.serviceWorker.register('./firebase-messaging-sw.js',{
-  scope: '/quickstart-js/messaging/'
-})
-  .then((registration) => {
-   messaging.useServiceWorker(registration);
+  navigator.serviceWorker.getRegistrations().then((r) => {
+   return Promise.all(r.map(reg => reg.unregister()));
 });
-    firebase.initializeApp({
+
+  firebase.initializeApp({
     apiKey: "AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo",
     authDomain: "mqtttestapplication.firebaseapp.com",
     databaseURL: "https://mqtttestapplication.firebaseio.com",
@@ -108,6 +105,14 @@ limitations under the License.
     measurementId: "G-58TESX7FPJ"
   });
    const messaging = firebase.messaging();
+  
+  navigator.serviceWorker.register('./firebase-messaging-sw.js',{
+  scope: '/quickstart-js/messaging/'
+})
+  .then((registration) => {
+   messaging.useServiceWorker(registration);
+});
+    
   
  
   // [END get_messaging_object]
