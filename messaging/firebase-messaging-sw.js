@@ -5,7 +5,7 @@
 // importScripts('/__/firebase/7.15.0/firebase-messaging.js');
 // importScripts('/__/firebase/init.js');
 
-const messaging = firebase.messaging();
+
 
  // [START initialize_firebase_in_sw]
  // Give the service worker access to Firebase Messaging.
