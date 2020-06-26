@@ -91,8 +91,14 @@ limitations under the License.
  
   
   firebase.initializeApp({
+    apiKey: "AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo",
+    authDomain: "mqtttestapplication.firebaseapp.com",
+    databaseURL: "https://mqtttestapplication.firebaseio.com",
+    projectId: "mqtttestapplication",
+    storageBucket: "mqtttestapplication.appspot.com",
     messagingSenderId: "1030960605375",
-        projectId: "mqtttestapplication"
+    appId: "1:1030960605375:web:d78549c26c185f3ab4fe0a",
+    measurementId: "G-58TESX7FPJ"
   });
    const messaging = firebase.messaging();
     navigator.serviceWorker.register('firebase-messaging-sw.js',{
