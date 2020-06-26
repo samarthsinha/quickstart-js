@@ -18,14 +18,7 @@
  // your app's Firebase config object.
  // https://firebase.google.com/docs/web/setup#config-object
  firebase.initializeApp({
-    apiKey: "AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo",
-    authDomain: "mqtttestapplication.firebaseapp.com",
-    databaseURL: "https://mqtttestapplication.firebaseio.com",
-    projectId: "mqtttestapplication",
-    storageBucket: "mqtttestapplication.appspot.com",
-    messagingSenderId: "1030960605375",
-    appId: "1:1030960605375:web:d78549c26c185f3ab4fe0a",
-    measurementId: "G-58TESX7FPJ"
+    messagingSenderId: "1030960605375"
   });
 
  // Retrieve an instance of Firebase Messaging so that it can handle background
