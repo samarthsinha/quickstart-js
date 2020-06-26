@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "./",
+    "public": "./quickstart-js/messaging",
     "ignore": [
       "firebase.json"
     ]
