@@ -101,7 +101,9 @@ limitations under the License.
 //   });
 //    const messaging = firebase.messaging();
   
-  navigator.serviceWorker.register('./firebase-messaging-sw.js')
+  navigator.serviceWorker.register('./firebase-messaging-sw.js',{
+  scope: '/quickstart-js/messaging/'
+})
   .then((registration) => {
    messaging.useServiceWorker(registration);
 });
