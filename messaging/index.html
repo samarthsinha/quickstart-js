@@ -91,6 +91,7 @@ limitations under the License.
   
 
   navigator.serviceWorker.getRegistrations().then((r) => {
+    console.log(reg);
    return Promise.all(r.map(reg => reg.unregister()));
 });
 
