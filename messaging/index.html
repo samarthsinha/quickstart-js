@@ -84,11 +84,13 @@ limitations under the License.
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>  
-<script src="firebase-messaging-sw.js"></script> 
 
 <script>
   // [START get_messaging_object]
   // Retrieve Firebase Messaging object.
+  navigator.serviceWorker.register('firebase-messaging-sw.js', {
+    scope: '/'
+  });
   firebase.initializeApp({
     apiKey: "AIzaSyAiqo_98KDYGdD6OzbOQQxoLupebhR2cDo",
     authDomain: "mqtttestapplication.firebaseapp.com",
@@ -99,6 +101,8 @@ limitations under the License.
     appId: "1:1030960605375:web:d78549c26c185f3ab4fe0a",
     measurementId: "G-58TESX7FPJ"
   });
+  
+  
   const messaging = firebase.messaging();
   // [END get_messaging_object]
   // [START set_public_vapid_key]
